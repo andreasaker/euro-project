@@ -1,0 +1,9 @@
+.insurance_list {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.insurance_list p {
+  text-align: center;
+}

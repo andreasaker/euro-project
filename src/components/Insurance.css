@@ -1,0 +1,35 @@
+.insurance {
+  display: flex;
+  flex-flow: column;
+  margin: 20px 0 20px 0;
+  padding: 10px;
+  background-color: #f0f6f8;
+  border-radius: 10px;
+}
+
+.insurance h2 {
+  margin: 5px 0 5px 0;
+}
+
+.insurance h3 {
+  margin: 5px 0 5px 0;
+}
+
+.insurance p {
+  margin: 5px 0 15px 0;
+  text-align: left;
+}
+
+.insurance a {
+  padding: 5px 0 5px 0;
+  height: 30px;
+  max-width: 100px;
+  text-align: center;
+  font-size: 1.3rem;
+  background-color: #ffffff;
+  color: #c8007f;
+  border-radius: 20px;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+}

@@ -1,0 +1,30 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form h2 {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+form input {
+  padding: 7px 0 7px 0;
+  font-size: 1.2rem;
+  text-align: center;
+  border-width: 2px;
+  border-color: #c8007f;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 810px) {
+  form {
+    padding: 50px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  form {
+    padding: 25px;
+  }
+}

@@ -1,0 +1,16 @@
+.navbar {
+  display: flex;
+  flex-flow: row;
+  align-content: center;
+  justify-content: center;
+  margin: 0 10px 0 10px;
+}
+
+.navbar h2 {
+  flex-grow: 1;
+  margin: auto;
+}
+
+.navbar button {
+  flex-grow: 1;
+}
