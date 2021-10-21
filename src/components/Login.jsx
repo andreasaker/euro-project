@@ -19,18 +19,7 @@ const Login = ({setUser}) => {
         authenticate();
     }
     
-    //check if username exists, if yes: set user as tempUser state
-    const userExists = () => {
-        const usernameField = document.getElementById("username")
-        usernameField.setCustomValidity("The username does not exist.")
-   
-        users.forEach(u => {
-            if(u.login === credentials.username){
-                setTempUser(u)
-                usernameField.setCustomValidity("")
-            }
-        })
-    }
+    
 
      //Check if user id is available and then set is as active user
     const authenticate = () => {
@@ -41,8 +30,21 @@ const Login = ({setUser}) => {
 
     //Run username check on username input change
     useEffect(()=>{
+        //check if username exists, if yes: set user as tempUser state
+        const userExists = () => {
+            const usernameField = document.getElementById("username")
+            usernameField.setCustomValidity("The username does not exist.")
+    
+            users.forEach(u => {
+                if(u.login === credentials.username){
+                    setTempUser(u)
+                    usernameField.setCustomValidity("")
+                }
+            })
+        }
         userExists();
-    }, [credentials.username])
+        console.log("CHECK")
+    }, [credentials.username, users])
 
     //Get users from API and set the Users state
     useEffect(() => {

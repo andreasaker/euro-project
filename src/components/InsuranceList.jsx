@@ -8,14 +8,16 @@ const InsuranceList = ({user}) => {
     const [insurances, setInsurences] = useState([])
      
     
-    //listview
+    //if there is insurances available, display them
     const InsuranceList = () =>{
         if(userInsurances.length > 0){
             return userInsurances.map(ui => {
                 const insurance = insurances.find(i => i.id === ui)
                 console.log("insuranse", insurances, insurance, ui)
                 if(typeof insurance !== "undefined"){
-                return(<Insurance key={insurance.id} insurance={insurance}/>)
+                    return(<Insurance key={insurance.id} insurance={insurance}/>)
+                }else{
+                    return(<p>Ops, nu blev det fel. Vi kan inte hitta din försäkring.</p>)
                 }
             }); 
         }
@@ -24,7 +26,7 @@ const InsuranceList = ({user}) => {
         }
     }
 
-    //On render, get UserInsurences from api and set it to userInsurances var.
+    //On render, get User Insurences from api and set it to userInsurances state.
     useEffect(()=>{
         const fetchUserInsurances = async () => {
             const result = await getUserInsurances();
@@ -33,7 +35,7 @@ const InsuranceList = ({user}) => {
         fetchUserInsurances();
     },[user.id])
 
-    //On render, get insurence plans
+    //On render, get insurence plans and set it to insurances state.
     useEffect(()=>{
         const fetchInsurences = async () => {
           const response = await getInsurances();
