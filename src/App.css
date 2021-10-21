@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-content: center;
-  height: 100vh;
 }
 
 .content {
@@ -20,11 +19,13 @@
   .App {
     justify-content: center;
     align-items: center;
+    height: 100vh;
   }
 
   .content {
     margin: 50px 30px 50px 30px;
-    padding: 30px 15px 30px 15px;
+    padding: 0 15px 5px 15px;
+    max-width: 800px;
   }
 }
 
@@ -32,6 +33,5 @@
   .content {
     margin: auto;
     width: 800px;
-    padding: 0 15px 5px 15px;
   }
 }
