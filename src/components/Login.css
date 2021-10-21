@@ -1,11 +1,13 @@
 form {
   display: flex;
   flex-direction: column;
+  margin: 0 5px 0 5px;
 }
 
-form h2 {
-  font-size: 1.4rem;
+form h1 {
   text-align: center;
+  margin: 10px 0 25px 0;
+  font-size: 1.5rem;
 }
 
 form input {
@@ -17,7 +19,29 @@ form input {
   border-radius: 10px;
 }
 
+input:focus,
+textarea:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  border-color: #c8007f;
+  background-color: #c8007f63;
+}
+
+.test {
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: #7357ee;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
 @media screen and (min-width: 810px) {
+  form h1 {
+    text-align: left;
+  }
   form {
     padding: 50px;
   }
@@ -26,5 +50,9 @@ form input {
 @media screen and (min-width: 1080px) {
   form {
     padding: 25px;
+  }
+
+  form button {
+    max-width: 130px;
   }
 }

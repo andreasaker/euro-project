@@ -14,3 +14,12 @@
 .navbar button {
   flex-grow: 1;
 }
+
+@media screen and (min-width: 810px) {
+  .navbar button {
+    flex-grow: 0;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+}

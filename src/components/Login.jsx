@@ -19,7 +19,7 @@ const Login = ({setUser}) => {
         authenticate();
     }
     
-    //check if username exists
+    //check if username exists, if yes: set user as tempUser state
     const userExists = () => {
         const usernameField = document.getElementById("username")
         usernameField.setCustomValidity("The username does not exist.")
@@ -32,19 +32,19 @@ const Login = ({setUser}) => {
         })
     }
 
-     //authenticate user
+     //Check if user id is available and then set is as active user
     const authenticate = () => {
         if(typeof tempUser.id !== "undefined"){
            setUser(tempUser);
         }
     }
 
-    //Check for existing users on username value change
+    //Run username check on username input change
     useEffect(()=>{
         userExists();
     }, [credentials.username])
 
-    //Get users from API
+    //Get users from API and set the Users state
     useEffect(() => {
         const fetchUsers = async () => {
             const response = await getUsers();
@@ -55,9 +55,9 @@ const Login = ({setUser}) => {
 
     return(
         <form onSubmit={e=> handleSubmit(e)}>
-            <h2>Logga in med ditt användarnamn</h2>
+            <h1>Logga in med ditt användarnamn</h1>
             <input id="username" type="text" name="username" onChange={e => handleInput(e)} value={credentials.username} placeholder="Ange ditt användarnamn" required/>
-            <button type="submit">Login</button>
+            <button type="submit">Logga in</button>
         </form>
     )
 }

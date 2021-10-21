@@ -12,7 +12,7 @@
   align-content: center;
   margin: 30px 10px 30px 10px;
   padding: 30px 5px 30px 5px;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0px 5px 20px #396675;
 }
 
@@ -31,8 +31,7 @@
 @media screen and (min-width: 1080px) {
   .content {
     margin: auto;
-    width: 900px;
-    padding: 30px 15px 30px 15px;
-    max-width: 900px;
+    width: 800px;
+    padding: 0 15px 5px 15px;
   }
 }

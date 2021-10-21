@@ -5,5 +5,11 @@
 }
 
 .insurance_list p {
-  text-align: center;
+  text-align: left;
+}
+
+@media screen and (min-width: 810px) {
+  .insurance_list {
+    padding: 20px;
+  }
 }
