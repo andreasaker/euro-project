@@ -52,6 +52,11 @@ textarea:focus {
     padding: 25px;
   }
 
+  form input {
+    text-align: left;
+    padding: 10px 0 10px 20px;
+  }
+
   form button {
     max-width: 130px;
   }
