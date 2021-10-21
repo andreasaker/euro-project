@@ -43,7 +43,6 @@ const Login = ({setUser}) => {
             })
         }
         userExists();
-        console.log("CHECK")
     }, [credentials.username, users])
 
     //Get users from API and set the Users state

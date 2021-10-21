@@ -13,9 +13,9 @@ const InsuranceList = ({user}) => {
         if(userInsurances.length > 0){
             return userInsurances.map(ui => {
                 const insurance = insurances.find(i => i.id === ui)
-                console.log("insuranse", insurances, insurance, ui)
                 if(typeof insurance !== "undefined"){
-                    return(<Insurance key={insurance.id} insurance={insurance}/>)
+                    
+                    return(<Insurance key={`id-${insurance.id}`} insurance={insurance}/>)
                 }else{
                     return(<p>Ops, nu blev det fel. Vi kan inte hitta din försäkring.</p>)
                 }
