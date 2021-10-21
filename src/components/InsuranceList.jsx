@@ -15,7 +15,7 @@ const InsuranceList = ({user}) => {
                 const insurance = insurances.find(i => i.id === ui)
                 if(typeof insurance !== "undefined"){
                     
-                    return(<Insurance key={`id-${insurance.id}`} insurance={insurance}/>)
+                    return(<Insurance key={insurance.id} insurance={insurance}/>)
                 }else{
                     return(<p>Ops, nu blev det fel. Vi kan inte hitta din försäkring.</p>)
                 }

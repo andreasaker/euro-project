@@ -26,8 +26,7 @@ textarea:focus {
   box-shadow: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
-  border-color: #c8007f;
-  background-color: #c8007f63;
+  background-color: #66b8f248;
 }
 
 .test {

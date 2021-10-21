@@ -36,7 +36,7 @@ const Login = ({setUser}) => {
             usernameField.setCustomValidity("The username does not exist.")
     
             users.forEach(u => {
-                if(u.login === credentials.username){
+                if(u.login === credentials.username.toLowerCase()){
                     setTempUser(u)
                     usernameField.setCustomValidity("")
                 }
